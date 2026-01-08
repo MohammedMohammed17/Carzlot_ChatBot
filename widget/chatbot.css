@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+  --carzlot-bg: #f5f6f8;
+  --carzlot-card: #ffffff;
+  --carzlot-text: #0f172a;
+  --carzlot-muted: #64748b;
+  --carzlot-primary: #1d4ed8;
+  --carzlot-primary-dark: #1e40af;
+  --carzlot-border: #e2e8f0;
+  --carzlot-user: #e0f2fe;
+  --carzlot-bot: #f8fafc;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.carzlot-widget {
+  max-width: 420px;
+  min-width: 320px;
+  background: var(--carzlot-card);
+  border: 1px solid var(--carzlot-border);
+  border-radius: 16px;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.carzlot-header {
+  padding: 20px 24px 16px;
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+  color: #fff;
+}
+
+.carzlot-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.carzlot-subtitle {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+.carzlot-vin-bar {
+  display: flex;
+  gap: 8px;
+  padding: 16px 24px 8px;
+  background: var(--carzlot-bg);
+}
+
+.carzlot-vin-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--carzlot-border);
+  font-size: 14px;
+}
+
+.carzlot-vin-button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--carzlot-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carzlot-vin-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.carzlot-vin-status {
+  padding: 0 24px 12px;
+  font-size: 12px;
+  color: var(--carzlot-muted);
+  background: var(--carzlot-bg);
+}
+
+.carzlot-messages {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 300px;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.carzlot-message {
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.carzlot-bot {
+  background: var(--carzlot-bot);
+  align-self: flex-start;
+  border: 1px solid var(--carzlot-border);
+}
+
+.carzlot-user {
+  background: var(--carzlot-user);
+  align-self: flex-end;
+}
+
+.carzlot-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid var(--carzlot-border);
+  background: #fff;
+}
+
+.carzlot-question-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--carzlot-border);
+  font-size: 14px;
+}
+
+.carzlot-send-button {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: var(--carzlot-primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carzlot-send-button:hover,
+.carzlot-vin-button:hover {
+  background: var(--carzlot-primary-dark);
+}
+
+@media (max-width: 600px) {
+  .carzlot-widget {
+    width: 100%;
+  }
+}
